@@ -26,9 +26,9 @@ class FrontpageController extends Controller
     public function index()
     {
         //$users = User::get();
-        $posts = Post::latest()->where('is_published', '1')->paginate(5);
+        $posts = Post::latest()->where('is_published', '1')->paginate(10);
         return view('frontpage',compact('posts'))
-            ->with('i', (request()->input('page', 1) - 1) * 5);
+            ->with('i', (request()->input('page', 1) - 1) * 10);
     }
 
     // /**

@@ -69,6 +69,6 @@
         </tr>
         @endforeach
     </table>
-    {!! $posts->links() !!}
+    {{-- {!! $posts->links() !!} --}}
 
 @endsection
